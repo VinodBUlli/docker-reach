@@ -9,7 +9,18 @@ before_install:
 
 script:
 #   - docker run 7066409406/docker-reach npm run test -- --coverage
-   
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
+
+
+
+
 #deploy:
 #     edge: true
 #    provider: elasticbeanstack
@@ -23,11 +34,3 @@ script:
 #    access_key_id: $AWS_ACCESS_KEY
 #    secret_access_key: $AWS_SECRET_KEY
 
-#deploy to github
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
