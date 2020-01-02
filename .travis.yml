@@ -10,3 +10,15 @@ before_install:
 script:
    - docker run 7066409406/docker-reach npm run test -- --coverage
    
+#deploy:
+#     edge: true
+#    provider: elasticbeanstack
+#    region: "us-west-2" 
+#    app: "docker-reach"
+#    env: "Docker-env" 
+#    bucket_name: "elastic" automatically created s3 bucket name automatically created when s3 bucket created
+#    bucket_path: "docker-reach"
+#    on:
+#       branch: master
+#    access_key_id: $AWS_ACCESS_KEY
+#    secret_access_key: $AWS_SECRET_KEY
