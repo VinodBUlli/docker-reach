@@ -8,7 +8,7 @@ before_install:
    - docker build -t 7066409406/docker-reach -f Dockerfile.dev .
 
 script:
-   - docker run 7066409406/docker-reach npm run test -- --coverage
+#   - docker run 7066409406/docker-reach npm run test -- --coverage
    
 #deploy:
 #     edge: true
